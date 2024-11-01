@@ -6,7 +6,7 @@
 
 typedef struct {
     char titre[100];
-    char description[255];
+    char description[255]; 
     char dateEcheance[11]; // format YYYY-MM-DD
     char priorite[10];     // "High" ou "Low"
 } Tache;
@@ -83,7 +83,7 @@ void modifierTache() {
 
 void supprimerTache() {
     int index;
-    printf("Entrez le numero de la tache a supprimer (1 à %d) : ", nombreTaches);
+    printf("Entrez le numero de la tache a supprimer (1 a %d) : ", nombreTaches);
     scanf("%d", &index);
 
     if (index < 1 || index > nombreTaches) {
@@ -126,7 +126,7 @@ int main() {
 
     do {
         afficherMenu();
-        printf("Entrez votre choix : ");
+        printf("\nEntrez votre choix : ");
         scanf("%d", &choix);
 
         switch (choix) {
@@ -149,7 +149,7 @@ int main() {
                 printf("Au revoir !\n");
                 break;
             default:
-                printf("Choix invalide. Veuillez réessayer.\n");
+                printf("Choix invalide. Veuillez reessayer.\n");
         }
     } while (choix != 0);
 
